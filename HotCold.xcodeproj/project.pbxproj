@@ -22,6 +22,9 @@
 		A3EA59B218FAC29400EE9158 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EA599118FAC29400EE9158 /* UIKit.framework */; };
 		A3EA59BA18FAC29400EE9158 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3EA59B818FAC29400EE9158 /* InfoPlist.strings */; };
 		A3EA59BC18FAC29400EE9158 /* HotColdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA59BB18FAC29400EE9158 /* HotColdTests.m */; };
+		A3EA59C718FAC81B00EE9158 /* ASWChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA59C618FAC81B00EE9158 /* ASWChoiceViewController.m */; };
+		A3EA59CA18FACA9F00EE9158 /* ASWHideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA59C918FACA9F00EE9158 /* ASWHideViewController.m */; };
+		A3EA59CD18FACAAD00EE9158 /* ASWSeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA59CC18FACAAD00EE9158 /* ASWSeekViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,12 @@
 		A3EA59B718FAC29400EE9158 /* HotColdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HotColdTests-Info.plist"; sourceTree = "<group>"; };
 		A3EA59B918FAC29400EE9158 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3EA59BB18FAC29400EE9158 /* HotColdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotColdTests.m; sourceTree = "<group>"; };
+		A3EA59C518FAC81B00EE9158 /* ASWChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASWChoiceViewController.h; sourceTree = "<group>"; };
+		A3EA59C618FAC81B00EE9158 /* ASWChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASWChoiceViewController.m; sourceTree = "<group>"; };
+		A3EA59C818FACA9F00EE9158 /* ASWHideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASWHideViewController.h; sourceTree = "<group>"; };
+		A3EA59C918FACA9F00EE9158 /* ASWHideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASWHideViewController.m; sourceTree = "<group>"; };
+		A3EA59CB18FACAAD00EE9158 /* ASWSeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASWSeekViewController.h; sourceTree = "<group>"; };
+		A3EA59CC18FACAAD00EE9158 /* ASWSeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASWSeekViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +131,12 @@
 				A3EA59A618FAC29400EE9158 /* ASWViewController.m */,
 				A3EA59A818FAC29400EE9158 /* Images.xcassets */,
 				A3EA599418FAC29400EE9158 /* Supporting Files */,
+				A3EA59C518FAC81B00EE9158 /* ASWChoiceViewController.h */,
+				A3EA59C618FAC81B00EE9158 /* ASWChoiceViewController.m */,
+				A3EA59C818FACA9F00EE9158 /* ASWHideViewController.h */,
+				A3EA59C918FACA9F00EE9158 /* ASWHideViewController.m */,
+				A3EA59CB18FACAAD00EE9158 /* ASWSeekViewController.h */,
+				A3EA59CC18FACAAD00EE9158 /* ASWSeekViewController.m */,
 			);
 			path = HotCold;
 			sourceTree = "<group>";
@@ -255,6 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3EA599E18FAC29400EE9158 /* ASWAppDelegate.m in Sources */,
+				A3EA59C718FAC81B00EE9158 /* ASWChoiceViewController.m in Sources */,
+				A3EA59CD18FACAAD00EE9158 /* ASWSeekViewController.m in Sources */,
+				A3EA59CA18FACA9F00EE9158 /* ASWHideViewController.m in Sources */,
 				A3EA599A18FAC29400EE9158 /* main.m in Sources */,
 				A3EA59A718FAC29400EE9158 /* ASWViewController.m in Sources */,
 			);
@@ -471,6 +489,7 @@
 				A3EA59C118FAC29400EE9158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3EA59C218FAC29400EE9158 /* Build configuration list for PBXNativeTarget "HotColdTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +498,7 @@
 				A3EA59C418FAC29400EE9158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
