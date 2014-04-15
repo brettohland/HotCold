@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="760" y="-1"/>
         </scene>
-        <!--View Controller - Sending-->
+        <!--Hide View Controller - Sending-->
         <scene sceneID="roQ-YZ-HYr">
             <objects>
-                <viewController id="FjU-GI-TAX" sceneMemberID="viewController">
+                <viewController id="FjU-GI-TAX" customClass="ASWHideViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gNH-Hr-j8z"/>
                         <viewControllerLayoutGuide type="bottom" id="O4v-f4-YkD"/>
@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="1233" y="434"/>
         </scene>
-        <!--View Controller - Receive-->
+        <!--Seek View Controller - Seek-->
         <scene sceneID="1Sb-a9-iTC">
             <objects>
-                <viewController id="LEM-0u-pYm" sceneMemberID="viewController">
+                <viewController id="LEM-0u-pYm" customClass="ASWSeekViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r4q-X4-Nlt"/>
                         <viewControllerLayoutGuide type="bottom" id="Lfd-FO-iin"/>
@@ -98,7 +98,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Receive" id="xTd-bz-QAv"/>
+                    <navigationItem key="navigationItem" title="Seek" id="xTd-bz-QAv"/>
+                    <connections>
+                        <outlet property="howClose" destination="0B1-Dr-Aek" id="esL-ev-OxE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRu-Bm-1Hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

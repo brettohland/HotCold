@@ -9,6 +9,7 @@
 #import "ASWSeekViewController.h"
 
 @interface ASWSeekViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *howClose;
 
 @end
 
