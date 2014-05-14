@@ -60,12 +60,15 @@
 }
 
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
+
+    if ([beacons count] > 0) {
+        // Let's assume we're getting one beacon for now.
+        CLBeacon *beacon = beacons[0];
+        self.howClose.text = [NSString stringWithFormat:@"%f", beacon.accuracy];
+    } else {
+      self.howClose.text = @"No Beacons found";
+    }
     
-    // Let's assume we're getting one beacon for now.
-    
-    CLBeacon *beacon = beacons[0];
-    
-    self.howClose.text = [NSString stringWithFormat:@"%f", beacon.accuracy];
 }
 
 @end
