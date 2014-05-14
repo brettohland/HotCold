@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D9E7C95E-F445-499D-8076-F49DA6619A98</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HotCold</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C02B2CBE-51D4-4F80-9E00-71C8207E87F1</key>
+		<string>ssh://github.com/brettohland/HotCold.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HotCold.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C02B2CBE-51D4-4F80-9E00-71C8207E87F1</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/brettohland/HotCold.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C02B2CBE-51D4-4F80-9E00-71C8207E87F1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C02B2CBE-51D4-4F80-9E00-71C8207E87F1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HotCold</string>
+		</dict>
+	</array>
+</dict>
+</plist>
