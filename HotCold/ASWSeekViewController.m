@@ -7,27 +7,50 @@
 //
 
 #import "ASWSeekViewController.h"
+#import "ASWDefaults.h"
+@import CoreLocation;
 
-@interface ASWSeekViewController ()
+@interface ASWSeekViewController () <CLLocationManagerDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *howClose;
+
+@property NSMutableDictionary *beacons;
+@property CLLocationManager *locationManager;
+@property NSMutableDictionary *rangedRegions;
 
 @end
 
 @implementation ASWSeekViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.beacons = [[NSMutableDictionary alloc] init];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
+    self.rangedRegions = [[NSMutableDictionary alloc] init];
+    for (NSUUID *uuid in [ASWDefaults sharedDefaults].supportedProximityUUIDs) {
+        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
+        self.rangedRegions[region] = [NSArray array];
     }
-    return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    for (CLBeaconRegion *region in self.rangedRegions) {
+        [self.locationManager startRangingBeaconsInRegion:region];
+    }
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    for (CLBeaconRegion *region in self.rangedRegions) {
+        [self.locationManager stopRangingBeaconsInRegion:region];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,15 +59,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
+    
+    // Let's assume we're getting one beacon for now.
+    
+    CLBeacon *beacon = beacons[0];
+    
+    self.howClose.text = [NSString stringWithFormat:@"%f", beacon.accuracy];
 }
-*/
 
 @end

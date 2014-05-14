@@ -7,43 +7,71 @@
 //
 
 #import "ASWHideViewController.h"
+#import "ASWDefaults.h"
 
-@interface ASWHideViewController ()
+@import CoreLocation;
+@import CoreBluetooth;
+
+CBPeripheralManager *perhipheralManager = nil;
+CLBeaconRegion *region = nil;
+
+NSDictionary *beaconPerhipheralData;
+NSNumber *power = nil;
+
+@interface ASWHideViewController () <CBPeripheralManagerDelegate>
+
+@property NSUUID *uuid;
+@property NSNumber *major;
+@property NSNumber *minor;
 
 @end
 
 @implementation ASWHideViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.uuid = [ASWDefaults sharedDefaults].defaultProximityUUID;
+    self.major = [NSNumber numberWithShort:0];
+    self.minor = [NSNumber numberWithShort:0];
+    power = [ASWDefaults sharedDefaults].defaultPower;
+    
+    region = [[CLBeaconRegion alloc] initWithProximityUUID:self.uuid
+                                                     major:[self.major shortValue]
+                                                     minor:[self.minor shortValue]
+                                                identifier:BeaconIdentifier];
+    beaconPerhipheralData = [region peripheralDataWithMeasuredPower:power];
 }
 
-- (void)didReceiveMemoryWarning
-{
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (!perhipheralManager) {
+        perhipheralManager = [[CBPeripheralManager alloc] initWithDelegate:self
+                                                                     queue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+                                                                   options:nil];
+    } else {
+        perhipheralManager.delegate = self;
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    perhipheralManager.delegate = nil;
+}
+
+-(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
+    if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
+        NSLog(@"TRANSMITTING");
+        [perhipheralManager startAdvertising:beaconPerhipheralData];
+    } else if (peripheral.state == CBPeripheralManagerStatePoweredOff){
+        NSLog(@"Transmission Ceased");
+        [perhipheralManager stopAdvertising];
+    }
+}
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
