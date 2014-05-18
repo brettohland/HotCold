@@ -66,7 +66,7 @@
         CLBeacon *beacon = beacons[0];
         self.howClose.text = [NSString stringWithFormat:@"%f", beacon.accuracy];
     } else {
-      self.howClose.text = @"No Beacons found";
+      self.howClose.text = @"No Beacons Found";
     }
     
 }
