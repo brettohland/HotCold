@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		943D1AFB7BEB441E960DB364 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 942829D78C054E48BDAEC1DC /* libPods.a */; };
+		A34706271931967800EA7848 /* ASWStartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34706261931967800EA7848 /* ASWStartScreenViewController.m */; };
+		A347062A1931980700EA7848 /* ASWLobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34706291931980700EA7848 /* ASWLobbyViewController.m */; };
+		A347062D1931993800EA7848 /* ASWLobbyInitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A347062C1931993800EA7848 /* ASWLobbyInitViewController.m */; };
 		A3BE292918FDD3DE00510251 /* ASWDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BE292818FDD3DE00510251 /* ASWDefaults.m */; };
 		A3EA598E18FAC29400EE9158 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EA598D18FAC29400EE9158 /* Foundation.framework */; };
 		A3EA599018FAC29400EE9158 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EA598F18FAC29400EE9158 /* CoreGraphics.framework */; };
@@ -17,7 +20,6 @@
 		A3EA599E18FAC29400EE9158 /* ASWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA599D18FAC29400EE9158 /* ASWAppDelegate.m */; };
 		A3EA59A118FAC29400EE9158 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EA599F18FAC29400EE9158 /* Main_iPhone.storyboard */; };
 		A3EA59A418FAC29400EE9158 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EA59A218FAC29400EE9158 /* Main_iPad.storyboard */; };
-		A3EA59A718FAC29400EE9158 /* ASWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA59A618FAC29400EE9158 /* ASWViewController.m */; };
 		A3EA59A918FAC29400EE9158 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EA59A818FAC29400EE9158 /* Images.xcassets */; };
 		A3EA59B018FAC29400EE9158 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EA59AF18FAC29400EE9158 /* XCTest.framework */; };
 		A3EA59B118FAC29400EE9158 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EA598D18FAC29400EE9158 /* Foundation.framework */; };
@@ -42,6 +44,12 @@
 /* Begin PBXFileReference section */
 		53F3F69431CC4A5BBB58383C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		942829D78C054E48BDAEC1DC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34706251931967800EA7848 /* ASWStartScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASWStartScreenViewController.h; sourceTree = "<group>"; };
+		A34706261931967800EA7848 /* ASWStartScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASWStartScreenViewController.m; sourceTree = "<group>"; };
+		A34706281931980700EA7848 /* ASWLobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASWLobbyViewController.h; sourceTree = "<group>"; };
+		A34706291931980700EA7848 /* ASWLobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASWLobbyViewController.m; sourceTree = "<group>"; };
+		A347062B1931993800EA7848 /* ASWLobbyInitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASWLobbyInitViewController.h; sourceTree = "<group>"; };
+		A347062C1931993800EA7848 /* ASWLobbyInitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASWLobbyInitViewController.m; sourceTree = "<group>"; };
 		A3BE292718FDD3DE00510251 /* ASWDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASWDefaults.h; sourceTree = "<group>"; };
 		A3BE292818FDD3DE00510251 /* ASWDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASWDefaults.m; sourceTree = "<group>"; };
 		A3EA598A18FAC29400EE9158 /* HotCold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotCold.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,8 +64,6 @@
 		A3EA599D18FAC29400EE9158 /* ASWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASWAppDelegate.m; sourceTree = "<group>"; };
 		A3EA59A018FAC29400EE9158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A3EA59A318FAC29400EE9158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		A3EA59A518FAC29400EE9158 /* ASWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASWViewController.h; sourceTree = "<group>"; };
-		A3EA59A618FAC29400EE9158 /* ASWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASWViewController.m; sourceTree = "<group>"; };
 		A3EA59A818FAC29400EE9158 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A3EA59AE18FAC29400EE9158 /* HotColdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotColdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EA59AF18FAC29400EE9158 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -135,8 +141,6 @@
 				A3EA599418FAC29400EE9158 /* Supporting Files */,
 				A3EA599C18FAC29400EE9158 /* ASWAppDelegate.h */,
 				A3EA599D18FAC29400EE9158 /* ASWAppDelegate.m */,
-				A3EA59A518FAC29400EE9158 /* ASWViewController.h */,
-				A3EA59A618FAC29400EE9158 /* ASWViewController.m */,
 				A3EA59C518FAC81B00EE9158 /* ASWChoiceViewController.h */,
 				A3EA59C618FAC81B00EE9158 /* ASWChoiceViewController.m */,
 				A3EA59C818FACA9F00EE9158 /* ASWHideViewController.h */,
@@ -145,6 +149,12 @@
 				A3EA59CC18FACAAD00EE9158 /* ASWSeekViewController.m */,
 				A3BE292718FDD3DE00510251 /* ASWDefaults.h */,
 				A3BE292818FDD3DE00510251 /* ASWDefaults.m */,
+				A34706251931967800EA7848 /* ASWStartScreenViewController.h */,
+				A34706261931967800EA7848 /* ASWStartScreenViewController.m */,
+				A34706281931980700EA7848 /* ASWLobbyViewController.h */,
+				A34706291931980700EA7848 /* ASWLobbyViewController.m */,
+				A347062B1931993800EA7848 /* ASWLobbyInitViewController.h */,
+				A347062C1931993800EA7848 /* ASWLobbyInitViewController.m */,
 			);
 			path = HotCold;
 			sourceTree = "<group>";
@@ -321,10 +331,12 @@
 				A3BE292918FDD3DE00510251 /* ASWDefaults.m in Sources */,
 				A3EA599E18FAC29400EE9158 /* ASWAppDelegate.m in Sources */,
 				A3EA59C718FAC81B00EE9158 /* ASWChoiceViewController.m in Sources */,
+				A34706271931967800EA7848 /* ASWStartScreenViewController.m in Sources */,
 				A3EA59CD18FACAAD00EE9158 /* ASWSeekViewController.m in Sources */,
+				A347062A1931980700EA7848 /* ASWLobbyViewController.m in Sources */,
+				A347062D1931993800EA7848 /* ASWLobbyInitViewController.m in Sources */,
 				A3EA59CA18FACA9F00EE9158 /* ASWHideViewController.m in Sources */,
 				A3EA599A18FAC29400EE9158 /* main.m in Sources */,
-				A3EA59A718FAC29400EE9158 /* ASWViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

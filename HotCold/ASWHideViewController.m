@@ -56,6 +56,7 @@ NSNumber *power = nil;
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    [perhipheralManager stopAdvertising];
     perhipheralManager.delegate = nil;
 }
 

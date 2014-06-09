@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 ampersandsoftworks. All rights reserved.
 //
 
-@import Foundation;
-
 extern NSString *BeaconIdentifier;
 
 @interface ASWDefaults : NSObject

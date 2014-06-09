@@ -8,13 +8,13 @@
 
 #import "ASWSeekViewController.h"
 #import "ASWDefaults.h"
+
 @import CoreLocation;
 
 @interface ASWSeekViewController () <CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *howClose;
 
-@property NSMutableDictionary *beacons;
 @property CLLocationManager *locationManager;
 @property NSMutableDictionary *rangedRegions;
 
@@ -24,8 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.beacons = [[NSMutableDictionary alloc] init];
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
